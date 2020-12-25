@@ -1,0 +1,1 @@
+# autoinit your projects
