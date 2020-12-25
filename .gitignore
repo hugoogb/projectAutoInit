@@ -1,3 +1,7 @@
 /*
 !README.md
 !.gitignore
+
+!command.sh
+!create.py
+!requirements.txt
