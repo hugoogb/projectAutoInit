@@ -40,8 +40,8 @@ env_setup() {
 source_command() {
   source $HOME/projectAutoInit/create.sh
 
-  SOURCE_CREATE_EXISTS_ZSH=`cat .zshrc | grep 'source $HOME/projectAutoInit/create.sh'`
-  SOURCE_CREATE_EXISTS_BASH=`cat .bashrc | grep 'source $HOME/projectAutoInit/create.sh'`
+  SOURCE_CREATE_EXISTS_ZSH=`cat ~/.zshrc | grep 'source $HOME/projectAutoInit/create.sh'`
+  SOURCE_CREATE_EXISTS_BASH=`cat ~/.bashrc | grep 'source $HOME/projectAutoInit/create.sh'`
 
   if [ -e $HOME/.zshrc ]; then
     if [ ! $SOURCE_CREATE_EXISTS_ZSH ]; then
