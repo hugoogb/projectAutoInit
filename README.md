@@ -11,8 +11,9 @@ curl -s https://raw.githubusercontent.com/hugoogb/projectAutoInit/master/install
 Edit the `.env` file created and set it up using the format below
 
 ```sh
+GITHUB_USERNAME="your_github_username"
 GITHUB_TOKEN="your_github_token"
-PROJECTS_PATH="/path/to/your/projects/dir/"
+GITHUB_PROJECTS_PATH="/path/to/your/projects/"
 ```
 
 ## Usage
