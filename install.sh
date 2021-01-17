@@ -1,7 +1,7 @@
 #!/bin/bash
 
 clone_repo() {
-  git clone "https://github.com/hugoogb/projectAutoInit.git" $HOME/projectAutoInit
+  git clone https://github.com/hugoogb/projectAutoInit.git $HOME/projectAutoInit
   cd $HOME/projectAutoInit
 }
 
