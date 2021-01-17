@@ -1,9 +1,9 @@
 #!/bin/bash
 
 create() {
-  cd $HOME/projectAutoInit
-  source $HOME/.env
-  python create.py $1
+  cd $HOME
+  source .env
+  python $HOME/projectAutoInit/create.py $1
 }
 
 git_init() {
@@ -14,6 +14,7 @@ git_init() {
   echo "!README.md" >> .gitignore
   echo "!.gitignore" >> .gitignore
   git add README.md .gitignore
+  git commit -m "Initial commit"
 
   if [ -d $HOME/.ssh ]; then
     git remote add origin git@github.com:$USERNAME/$1.git
@@ -21,7 +22,7 @@ git_init() {
     git remote add origin https://github.com/$USERNAME/$1.git
   fi
 
-  git commit -m "Initial commit"
+  git branch -M master
   git push -u origin master
   $EDITOR
 }
