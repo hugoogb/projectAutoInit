@@ -1,7 +1,12 @@
 #!/bin/bash
 
 clone_repo() {
-  git clone https://github.com/hugoogb/projectAutoInit.git $HOME/projectAutoInit
+  if [ -d $HOME/.ssh ]; then
+    git clone git@github:hugoogb/projectAutoInit.git $HOME/projectAutoInit
+  else
+    git clone https://github.com/hugoogb/projectAutoInit.git $HOME/projectAutoInit
+  fi
+
   cd $HOME/projectAutoInit
 }
 
