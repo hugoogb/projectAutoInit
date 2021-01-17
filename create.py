@@ -5,18 +5,20 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-projects_path = os.getenv("PROJECTS_PATH")
-github_username = os.getenv("GITHUB_USERNAME")
-github_password = os.getenv("GITHUB_PASSWORD")
+projects_path = os.getenv('PROJECTS_PATH')
+github_username = os.getenv('GITHUB_USERNAME')
+github_password = os.getenv('GITHUB_PASSWORD')
 
 
 def create():
     projectName = str(sys.argv[1])
     os.makedirs(projects_path + projectName)
 
-    github_user = Github(github_username, github_password).get_user()
+    github = Github(github_username, github_password)
+    github_user = github.get_user()
 
     github_user.create_repo(projectName)
+
     print("Succesfully initialized project{}".format(projectName))
 
 

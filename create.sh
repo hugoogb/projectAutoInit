@@ -4,6 +4,9 @@ create() {
   cd $HOME/projectAutoInit
   source $HOME/.env
   python create.py $1
+}
+
+git_init() {
   cd $PROJECTS_PATH$1
   git init
   echo "# $1" > README.md
@@ -22,3 +25,10 @@ create() {
   git push -u origin master
   $EDITOR
 }
+
+main() {
+  create
+  git_init
+}
+
+main
