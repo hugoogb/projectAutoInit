@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-projects_path = os.getenv('PROJECTS_PATH')
+projects_path = os.getenv('GITHUB_PROJECTS_PATH')
 github_token = os.getenv('GITHUB_TOKEN')
 
 
