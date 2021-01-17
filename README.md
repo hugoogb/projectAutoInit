@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-curl -s https://raw.githubusercontent.com/hugoogb/projectAutoInit/master/bootstrap.sh | bash
+curl -s https://raw.githubusercontent.com/hugoogb/projectAutoInit/master/install.sh | bash
 ```
 
 ## .env setup
