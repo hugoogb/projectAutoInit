@@ -17,9 +17,8 @@ install_requirements() {
 env_setup() {
   touch $HOME/.env
 
-  echo "GITHUB_USERNAME=""" >> $HOME/.env
-  echo "GITHUB_PASSWORD=""" >> $HOME/.env
-  echo "PROJECTS_PATH=""" >> $HOME/.env
+  echo "GITHUB_TOKEN=" >> $HOME/.env
+  echo "PROJECTS_PATH=" >> $HOME/.env
 }
 
 source_command() {
