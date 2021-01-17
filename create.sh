@@ -1,9 +1,9 @@
 #!/bin/bash
 
 create() {
-  cd $HOME
+  cd $HOME/projectAutoInit
   source $HOME/.env
-  python $HOME/projectAutoInit/create.py $1
+  python create.py $1
   cd $PROJECTS_PATH$1
   git init
   echo "# $1" > README.md
