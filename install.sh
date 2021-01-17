@@ -44,11 +44,11 @@ source_command() {
   SOURCE_CREATE_EXISTS_BASH=`cat ~/.bashrc | grep 'source $HOME/projectAutoInit/create.sh'`
 
   if [ -e $HOME/.zshrc ]; then
-    if [ ! $SOURCE_CREATE_EXISTS_ZSH ]; then
+    if [[ ! $SOURCE_CREATE_EXISTS_ZSH ]]; then
       echo "source $HOME/projectAutoInit/create.sh" >> $HOME/.zshrc
     fi
   else
-    if [ ! $SOURCE_CREATE_EXISTS_BASH ]; then
+    if [[ ! $SOURCE_CREATE_EXISTS_BASH ]]; then
       echo "source $HOME/projectAutoInit/create.sh" >> $HOME/.bashrc
     fi
   fi
