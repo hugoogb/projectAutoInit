@@ -1,13 +1,11 @@
 #!/bin/bash
 
 create() {
-  cd $HOME
-  source .env
-  python $HOME/projectAutoInit/create.py $1
-}
-
-git_init() {
+  source $HOME/.env
+  cd $HOME/projectAutoInit
+  python create.py $1
   cd $GITHUB_PROJECTS_PATH$1
+
   git init
   echo "# $1" > README.md
   echo "/*" > .gitignore
@@ -26,10 +24,3 @@ git_init() {
   git push -u origin master
   $EDITOR
 }
-
-main() {
-  create
-  git_init
-}
-
-main
