@@ -1,4 +1,4 @@
-# autoinit your projects
+# DEPRECATED (not working) !!! autoinit your projects
 
 ## Install
 
